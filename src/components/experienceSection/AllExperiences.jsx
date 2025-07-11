@@ -26,12 +26,12 @@ const experiences = [
   },
   {
     job: "System Prototyper & App Idea Creator",
-    company: "Academic Projects & Freelance",
+    company: "Academic Projects",
     date: "2022–Present",
     responsibilities: [
-      "Created prototypes and conceptualized app/system ideas for various academic and freelance projects.",
-      "Focused on solving real-world problems in areas like tourism, governance, agriculture, and community services.",
-      "Transformed abstract ideas into functional wireframes, workflows, and early-stage system designs.",
+      "Created prototypes and conceptualized app/system ideas.",
+      "Focused on solving real-world problems in areas like tourism.",
+      "Transformed abstract ideas into functional wireframes, workflows.",
     ],
   },
 ];
