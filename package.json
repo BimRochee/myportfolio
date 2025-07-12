@@ -1,9 +1,9 @@
 {
-  "name": "aq-portfolio",
+  "name": "bim-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/BimRochee/portfolio.git",
+  "homepage": "https://github.com/BimRochee/myportfolio.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
