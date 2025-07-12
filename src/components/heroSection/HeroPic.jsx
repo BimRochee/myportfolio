@@ -13,7 +13,7 @@ const HeroPic = () => {
     >
       <img
         src="./public/images/HexaPic.png"
-        alt="Bim Rochee P. Agliam"
+        alt="Bim Rochee Agliam"
         className="max-h-[450px] w-auto"
       />
 
