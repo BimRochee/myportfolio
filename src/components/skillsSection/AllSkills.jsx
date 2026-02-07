@@ -9,6 +9,7 @@ import { TbBrandLaravel } from "react-icons/tb";
 import { SiFlutter } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+import { SiCsharp } from "react-icons/si";
 
 const skills = [
   {
@@ -45,7 +46,7 @@ const skills = [
   },
   {
     skill: "C#",
-    icon: SiSharp,
+    icon: SiCsharp,
   },
 ];
 
