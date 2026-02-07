@@ -1,7 +1,7 @@
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiFirebase } from "react-icons/si";
+import { SiFirebase, SiSharp } from "react-icons/si";
 import { SiSupabase } from "react-icons/si";
 import { SiPhp } from "react-icons/si";
 import { TbBrandLaravel } from "react-icons/tb";
@@ -44,7 +44,7 @@ const skills = [
   },
   {
   skill: "C#",
-  icon: SiCsharp,
+  icon: SiSharp,
   },
 ];
 
