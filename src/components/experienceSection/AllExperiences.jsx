@@ -2,16 +2,38 @@ import SingleExperience from "./SingleExperience";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
+import React from "react";
+
+/* ✅ Date helper */
+const formatDateWithDuration = (startDate) => {
+  const start = new Date(startDate);
+  const now = new Date();
+
+  let months =
+    (now.getFullYear() - start.getFullYear()) * 12 +
+    (now.getMonth() - start.getMonth());
+
+  if (now.getDate() < start.getDate()) {
+    months -= 1;
+  }
+
+  const startFormatted = start.toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+  });
+
+  return `${startFormatted} – Present · ${months} mos`;
+};
 
 const experiences = [
   {
     job: "Full-Stack Web Developer",
     company: "USeP x DOST-PCAARRD",
-    date: "2024 - 2025",
+    date: "2024 – 2025",
     responsibilities: [
-      "Collaborated with other interns to developed the admin panel.",
-      "Trained end-users on how to use the (web & mobile) app.",
-      "Contributed to the documentation and security feature of the project.",
+      "Collaborated with fellow interns to develop the admin panel.",
+      "Conducted end-user training for both web and mobile applications.",
+      "Contributed to project documentation and basic security features.",
     ],
   },
   {
@@ -19,19 +41,19 @@ const experiences = [
     company: "IT Capstone Project",
     date: "2025",
     responsibilities: [
-      "Developed a mobile application for the capstone project.",
+      "Developed a mobile application as part of the capstone project.",
       "Presented and demonstrated the system to the LGU of IGACOS.",
-      "Collaborated in drafting the patent documentation for the system.",
+      "Assisted in drafting patent-related documentation for the system.",
     ],
   },
   {
-    job: "System Prototyper & App Idea Creator",
-    company: "Academic Projects",
-    date: "2022–Present",
+    job: "Software Developer",
+    company: "Hyper Access",
+    date: formatDateWithDuration("2025-11-26"),
     responsibilities: [
-      "Created prototypes and conceptualized app/system ideas.",
-      "Focused on solving real-world problems in areas like tourism.",
-      "Transformed abstract ideas into functional wireframes, workflows.",
+      "Developing and maintaining accounting web applications.",
+      "Collaborating with cross-functional teams on feature implementation.",
+      "Implementing user-friendly and maintainable interfaces.",
     ],
   },
 ];
@@ -39,25 +61,22 @@ const experiences = [
 const AllExperiences = () => {
   return (
     <div className="flex md:flex-row sm:flex-col items-center justify-between">
-      {experiences.map((experience, index) => {
-        return (
-          <>
-            <SingleExperience key={index} experience={experience} />
-            {index < 2 ? (
-              <motion.div
-                variants={fadeIn("right", 0)}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: false, amount: 0.7 }}
-              >
-                <FaArrowRightLong className="text-6xl text-orange lg:block sm:hidden" />
-              </motion.div>
-            ) : (
-              ""
-            )}
-          </>
-        );
-      })}
+      {experiences.map((experience, index) => (
+        <React.Fragment key={index}>
+          <SingleExperience experience={experience} />
+
+          {index < experiences.length - 1 && (
+            <motion.div
+              variants={fadeIn("right", 0)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.7 }}
+            >
+              <FaArrowRightLong className="text-6xl text-orange lg:block sm:hidden" />
+            </motion.div>
+          )}
+        </React.Fragment>
+      ))}
     </div>
   );
 };

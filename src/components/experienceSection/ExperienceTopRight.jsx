@@ -6,11 +6,19 @@ const ExperienceTopRight = () => {
         <span className="font-bold text-white">
           Web and Mobile Development
         </span>
-        , leveraging best practices to create scalable and maintainable
-        solutions. <br />
-        So far, I’ve focused on developing applications used in{" "}
-        <span className="font-bold text-white">business, government, tourism, and associations</span>,
-        always aiming for clean code and exceptional user experiences.
+        , building{" "}
+        <span className="font-bold text-white">
+          business-oriented and accounting systems
+        </span>{" "}
+        using best practices to deliver scalable, secure, and maintainable
+        solutions.
+        <br />
+        <br />
+        My experience includes developing applications for{" "}
+        <span className="font-bold text-white">
+          businesses, government institutions, tourism platforms, and associations
+        </span>
+        , with a strong focus on clean code, usability, and real-world impact.
       </p>
     </div>
   );

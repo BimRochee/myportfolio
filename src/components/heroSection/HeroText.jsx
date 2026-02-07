@@ -9,10 +9,11 @@ const HeroText = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0 }}
-        className="lg:text-2xl sm:text-xl  uppercase text-lightGrey "
+        className="lg:text-2xl sm:text-xl uppercase text-lightGrey"
       >
         Mobile & Web Developer
       </motion.h2>
+
       <motion.h1
         variants={fadeIn("right", 0.4)}
         initial="hidden"
@@ -23,6 +24,7 @@ const HeroText = () => {
         Bim Rochee P. <br className="sm:hidden md:block" />
         Agliam
       </motion.h1>
+
       <motion.p
         variants={fadeIn("up", 0.6)}
         initial="hidden"
@@ -30,7 +32,8 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="text-lg mt-4"
       >
-        Passionate IT  fresh graduate with hands-on experience in mobile and web development.
+        Software developer with hands-on experience in building mobile and web
+        applications, <br />focused on creating practical and maintainable solutions.
       </motion.p>
     </div>
   );
